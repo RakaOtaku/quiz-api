@@ -6,7 +6,7 @@ exports.create = async (req, res) => {
 
     try {
         const data = await Quiz.create(req.body)
-        res.json({
+        req.json({
             message: "quiz created successfully.",
             data: data,
         });
@@ -24,7 +24,7 @@ exports.getAll = async(req, res) => {
         const quizzes = await Quiz.findAll()
         res.json({
             message: "Quizzes retrieved successfully.",
-            data: quizzes,
+            data: null,
         });
     } catch (error) {
         res.status(500).json({

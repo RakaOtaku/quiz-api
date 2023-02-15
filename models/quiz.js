@@ -3,9 +3,6 @@ module.exports = (sequelize, Sequelize) => {
         quiz: {
             type: Sequelize.STRING,
         },
-        image: {
-            type: Sequelize.STRING,
-        },
         a: {
             type: Sequelize.STRING,
         },
@@ -13,7 +10,7 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
         },
         c: {
-            type: Sequelize.STRING, 
+            type: Sequelize.STRING,
         },
         d: {
             type: Sequelize.STRING,

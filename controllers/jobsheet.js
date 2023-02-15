@@ -18,7 +18,7 @@ exports.submitOne = async (req, res) => {
         });
 
         if (req.body.answer == quiz.key) {
-            res.status(200).json({
+            res.status(200),json({
                 "message": "benar"
             })
         } else {
@@ -41,8 +41,8 @@ exports.submitMany = async (req, res) => {
 
     try {
         let benar = 0
-        let totalSoal = jobsheet.quizId.length
-        for (let i = 0; i < totalSoal ; i++) {
+        let totalSoal = jobsheet.quizId.lenght
+        for (let i = 0; i < totalSoal; i++) {
             const quiz = await Quiz.findOne({
                 limit: 1,
                 where: {
