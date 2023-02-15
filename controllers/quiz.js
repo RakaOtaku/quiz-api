@@ -24,7 +24,7 @@ exports.getAll = async(req, res) => {
         const quizzes = await Quiz.findAll()
         res.json({
             message: "Quizzes retrieved successfully.",
-            data: null,
+            data: quizzes,
         });
     } catch (error) {
         res.status(500).json({
